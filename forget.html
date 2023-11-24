@@ -1,0 +1,41 @@
+<!-- If the user forgets his/ her password: -->
+<!-- NOTE: Functionality not added yet. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <a href="login.php"
+        ><span class="icon3"><i class="fa-solid fa-xmark"></i></span
+      ></a>
+      <h2>Login</h2>
+      <form action="#">
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="example@gmail.com"
+            name="email"
+            value=""
+            required
+          />
+          <span class="icon4"><i class="fa-solid fa-envelope"></i></span>
+        </div>
+        <button type="submit" class="btn" name="submit">Send OTP</button>
+        <div class="login-register-option">
+          <p>Don't have an account?</p>
+          <a href="register.php">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

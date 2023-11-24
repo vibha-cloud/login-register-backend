@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+
+:root {
+  --green: #308d46;
+  --dark-green: #1d5f2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Figtree", sans-serif;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 50vh;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  text-align: center;
+  font-size: 5vh;
+  color: var(--green);
+}
+
+form {
+  width: 80%;
+}
+
+.input-field {
+  margin: 1.5vh 0;
+  position: relative;
+}
+
+.input-field input {
+  border: 0;
+  border-bottom: 2px solid var(--green);
+  width: 100%;
+  margin: 0.6vh 0;
+  padding: 0.7vh;
+  font-size: 2vh;
+  outline: none;
+  background: transparent;
+}
+
+.input-field label {
+  font-size: 2.5vh;
+}
+
+.check-box {
+  font-size: 2vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh 0;
+}
+
+.remember-box,
+.terms-box {
+  display: flex;
+  align-items: center;
+}
+
+.terms-box {
+  margin: 1vh 0;
+}
+
+.login-register-option {
+  display: flex;
+  margin: 1vh 0;
+  font-size: 2vh;
+}
+
+.login-register-option a {
+  margin-left: 1vh;
+}
+
+a {
+  font-weight: bold;
+  color: var(--green);
+}
+
+a:hover {
+  color: var(--dark-green);
+}
+
+.btn {
+  padding: 1vh;
+  width: 100%;
+  margin: 1vh 0;
+  font-size: 2vh;
+  font-weight: bold;
+  color: white;
+  background-color: var(--green);
+  border-radius: 5px;
+  border: 1px solid var(--green);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark-green);
+}
+
+.icon1,
+.icon2 {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+}
+
+.icon3 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 0 0.3rem;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--green);
+}
+
+.icon3:hover {
+  cursor: pointer;
+  background-color: var(--dark-green);
+}
+
+.icon4 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
