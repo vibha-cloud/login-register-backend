@@ -7,7 +7,7 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $confirmpassword = $_POST["confirmpassword"];
+        $confirmPassword = $_POST["confirmPassword"];
 
         $sql = "SELECT * FROM user WHERE email = '$email'";
         $duplicate = mysqli_query($conn, $sql);
@@ -15,7 +15,7 @@
           echo "<script> alert('This email has already been registered.'); </script>";
         }
         else {
-            if ($password != $confirmpassword) {
+            if ($password != $confirmPassword) {
                 echo "<script> alert('Password does not match.'); </script>";
             }
             
@@ -33,7 +33,6 @@
             }
         }
     }
-    // mysqli_close($conn);
 ?>
 
 
@@ -52,6 +51,7 @@
   <body>
     <div class="main-container">
       <h2>Register</h2>
+      
       <form action="#" method="post">
         <div class="input-field">
           <input
@@ -63,6 +63,7 @@
           />
           <span class="icon2"><i class="fa-solid fa-user"></i></span>
         </div>
+
         <div class="input-field">
           <input
             type="email"
@@ -73,6 +74,7 @@
           />
           <span class="icon2"><i class="fa-solid fa-envelope"></i></span>
         </div>
+
         <div class="input-field">
           <input
             type="password"
@@ -84,12 +86,13 @@
           />
           <span class="icon2"><i class="fa-solid fa-unlock"></i></span>
         </div>
+
         <div class="input-field">
           <input
             type="password"
             placeholder="Confirm password"
             maxlength="12"
-            name="confirmpassword"
+            name="confirmPassword"
             value=""
             required
           />
@@ -102,6 +105,7 @@
         </div>
 
         <button type="submit" class="btn" name="submit">Register</button>
+
         <div class="login-register-option">
           <p>Already have an account?</p>
           <a href="index.php">Sign In</a>

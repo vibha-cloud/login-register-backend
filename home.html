@@ -1,0 +1,52 @@
+<!-- If login or registration is successful: -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url("green-bg.jpg");
+        color: white;
+      }
+      .home-container {
+        text-align: center;
+        padding: 3rem 2rem;
+        margin: 2rem;
+        border-radius: 10px;
+        border: 1px solid whitesmoke;
+        backdrop-filter: blur(50px);
+      }
+      .home-heading {
+        font-size: 3rem;
+      }
+      .para {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+      .home-links {
+        display: flex;
+        justify-content: center;
+      }
+      a {
+        padding-left: 1rem;
+      }
+      a:hover {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home-container">
+      <h1 class="home-heading">Welcome to our Website !!</h1>
+      <p class="para">This is just a demo home page.</p>
+      <div class="home-links">
+        <a class="logout" href="logout.php">Log out</a>
+        <a class="logout" href="change_password.php">Change password</a>
+      </div>
+    </div>
+  </body>
+</html>
