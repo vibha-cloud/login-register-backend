@@ -86,6 +86,10 @@ form {
   margin: 1vh 0;
 }
 
+input[type="checkbox"] {
+  accent-color: var(--green);
+}
+
 .login-register-option {
   display: flex;
   margin: 1vh 0;

@@ -1,4 +1,5 @@
 <!-- To logout: -->
+
 <?php
     include("config.php");
     // $_SESSION = [];

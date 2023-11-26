@@ -1,4 +1,5 @@
 <!-- This file contains the database configurations assuming you are running mysql using user "root" and password "" -->
+
 <?php
     // session_start();
     $db_server = "localhost";
