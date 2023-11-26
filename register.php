@@ -2,33 +2,35 @@
 <?php
     include("config.php");
 
-    if (isset($_POST["submit"])) {
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["submit"])) {
 
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $confirmPassword = $_POST["confirmPassword"];
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $confirmPassword = $_POST["confirmPassword"];
 
-        $sql = "SELECT * FROM user WHERE email = '$email'";
-        $duplicate = mysqli_query($conn, $sql);
-        if (mysqli_num_rows($duplicate) > 0) {
-          echo "<script> alert('This email has already been registered.'); </script>";
-        }
-        else {
-            if ($password != $confirmPassword) {
-                echo "<script> alert('Password does not match.'); </script>";
+            $sql = "SELECT * FROM user WHERE email = '$email'";
+            $duplicate = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($duplicate) > 0) {
+              echo "<script> alert('This email has already been registered.'); </script>";
             }
-            
             else {
-                $query = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
-                $result = mysqli_query($conn, $query);
-                
-                if ($result) {
-                    echo "<script> alert('Registration Successful.'); </script>";
-                    header("Location: home.html");
+                if ($password != $confirmPassword) {
+                    echo "<script> alert('Password does not match.'); </script>";
                 }
+                
                 else {
-                    echo "Error";
+                    $query = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
+                    $result = mysqli_query($conn, $query);
+                    
+                    if ($result) {
+                        echo "<script> alert('Registration Successful.'); </script>";
+                        header("Location: home.html");
+                    }
+                    else {
+                        echo "Error";
+                    }
                 }
             }
         }

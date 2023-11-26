@@ -113,6 +113,7 @@ a:hover {
   font-weight: bold;
   color: white;
   background-color: var(--green);
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
